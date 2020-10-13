@@ -4,12 +4,11 @@ import { FiPlus } from 'react-icons/fi';
 import { Map, TileLayer } from 'react-leaflet';
 
 import 'leaflet/dist/leaflet.css';
+import Token from '../token';
  
 import mapMarkerImg from '../images/map-marker.svg';
 
 import '../styles/pages/orphanages-map.css'
-
-var token = 'pk.eyJ1IjoiZGV2eXh6IiwiYSI6ImNrZzdlZXZ4OTAwbWoyeHByOXVkMTVocHkifQ.yT6lFgn-yG-GD8rPAm8oGg';
 
 function OrphanagesMap(){
     return(
@@ -37,7 +36,7 @@ function OrphanagesMap(){
             >
                 {/*<TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />*/}
                 <TileLayer 
-                    url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+                    url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${Token}`}
                 />
 
             </Map>
